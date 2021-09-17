@@ -1,0 +1,14 @@
+{
+  "name": "bot",
+  "main": "dist/index.js",
+  "version": "1.0.0",
+  "description": "A bot created with create-discord-bot",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "13.1.0",
+    "dotenv": "10.0.0"
+  }
+}
