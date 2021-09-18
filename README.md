@@ -1,15 +1,15 @@
-# Create-discord-bot
+# Create-dc-bot
 
 A command to start projects for discord bots
 
 ## Instalation
 
 ```
-npm install create-discord-bot
+npm install create-dc-bot
 ```
 
 ## Usage
 
 ```
-create-discord-bot [name] [options]
+create-dc-bot [name] [options]
 ```

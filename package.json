@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "name": "create-discord-bot",
+  "name": "create-dc-bot",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
