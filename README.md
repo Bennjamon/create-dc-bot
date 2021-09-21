@@ -17,7 +17,8 @@ create-dc-bot [name] [options]
 ## Options
 
 - `[name]` The name of the project
-- `--template` The template to create the project, the possibles values are `typescript`, `javacript`, `js` or `ts`, the default is `javacript`
+- `--prefix <prefix>` The default prefix for the commands
+- `--template <name>` The template to create the project, the possibles values are `typescript`, `javacript`, `js` or `ts`, the default is `javacript`
 - `--package-manager <name>` The package manager to install the dependencies, the possibles values are `npm` or `yarn`
 - `--skip-git` With this flag you can skip the initialization of the git project
 - `--skip-installaion` With this flag you can skip the installation of dependendencies
@@ -25,6 +26,7 @@ create-dc-bot [name] [options]
 ## Project structure
 
 These are the project structures of both templates.
+
 **Note** the file `.gitignore` wont be generated if `--skip-git` is used.
 
 ### TypeScript
