@@ -13,7 +13,9 @@ client.on("message", async (msg) => {
   if (msg.content.toLowerCase().startsWith(prefix.toLowerCase())) {
     const [commandName, ...args] = msg.content.split(/ +/g);
     try {
-      const command = require(`./commands/${commandName}`);
+      const path = require.resolve(`./commands/${commandName}`);
+      delete require.cache[path];
+      const command = require(path);
       if (command.admin && !msg.member?.permissions.has("ADMINISTRATOR")) {
         msg.channel.send("You don't have permission to use this command");
         return;

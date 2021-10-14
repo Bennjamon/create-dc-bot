@@ -2,7 +2,7 @@
 
 A command to start projects for discord bots with [discord.js](https://discord.js.org/)
 
-## Instalation
+## Installation
 
 ```
 npm install -g create-dc-bot
@@ -18,53 +18,17 @@ create-dc-bot [name] [options]
 
 - `[name]` The name of the project
 - `--prefix <prefix>` The default prefix for the commands
-- `--template <name>` The template to create the project, the possibles values are `typescript`, `javacript`, `js` or `ts`, the default is `javacript`
-- `--package-manager <name>` The package manager to install the dependencies, the possibles values are `npm` or `yarn`
+- `--template <name>` The template to create the project `[javacript (default) | typescript | js | ts]`
+- `--package-manager <name>` The package manager to install the dependencie `[npm | yarn]`
 - `--skip-git` With this flag you can skip the initialization of the git project
 - `--skip-installaion` With this flag you can skip the installation of dependendencies
 
-## Project structure
+## Project structures
 
-These are the project structures of both templates.
+There are the important folders generated.
 
-**Note** the file `.gitignore` wont be generated if `--skip-git` is used.
+**Note** in Typescript, this folders will be generated in the `src/` folder
 
-### TypeScript
+`commands`: In this folder every added file will be automatically added as a command. **Note** - every file must have an declared function named "run" that will receives two parameters, (I) message object and (II) args.
 
-```
-.
-│───.env
-│───.gitignore
-│───package.json
-│───tsconfig.json
-├───@types
-│   └───Command.d.ts
-│
-└───src
-    │───index.ts
-    │
-    ├───commands
-    │   ├───help.ts
-    │   └───ping.ts
-    │
-    └───utils
-        └───getPrefix.ts
-
-```
-
-### JavaScript
-
-```
-.
-├───.env
-├───.gitignore
-├───index.js
-├───package.json
-│
-├───commands
-│   ├───help.js
-│   └───ping.js
-│
-└───utils
-    └───getPrefix.js
-```
+`utils` In this folder you can add the methods used in any part of your project
