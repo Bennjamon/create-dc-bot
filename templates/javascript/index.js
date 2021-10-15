@@ -5,13 +5,15 @@ const getPrefix = require("./utils/getPrefix");
 config();
 
 const client = new Client({
-  intents: "GUILD_MESSAGES",
+  intents: ["GUILD_MESSAGES", "GUILDS"],
 });
 
 client.on("message", async (msg) => {
   const prefix = getPrefix(msg);
   if (msg.content.toLowerCase().startsWith(prefix.toLowerCase())) {
-    const [commandName, ...args] = msg.content.split(/ +/g);
+    const [commandName, ...args] = msg.content
+      .slice(prefix.length)
+      .split(/ +/g);
     try {
       const path = require.resolve(`./commands/${commandName}`);
       delete require.cache[path];

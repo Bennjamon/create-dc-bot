@@ -2,4 +2,4 @@ function getPrefix() {
   return process.env.PREFIX;
 }
 
-exports = getPrefix;
+module.exports = getPrefix;
