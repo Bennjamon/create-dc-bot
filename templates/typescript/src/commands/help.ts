@@ -15,7 +15,7 @@ export async function run(msg: Message) {
     embed.addField(file.slice(0, -2), command.description);
   }
 
-  await msg.channel.send(embed);
+  await msg.channel.send({ embed: [embed] });
 }
 
 export const description = "Says pong";

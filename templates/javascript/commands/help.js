@@ -15,7 +15,7 @@ exports.run = function run(msg) {
     embed.addField(file.slice(0, -2), command.description);
   }
 
-  await msg.channel.send(embed);
+  await msg.channel.send({ embeds: [embed] });
 };
 
 exports.description = "Says pong";

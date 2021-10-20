@@ -1,6 +1,6 @@
 {
   "name": "bot",
-  "main": "dist/index.js",
+  "main": "index.js",
   "version": "1.0.0",
   "description": "A bot created with create-discord-bot",
   "scripts": {
